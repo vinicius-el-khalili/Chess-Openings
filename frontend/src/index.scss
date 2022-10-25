@@ -1,0 +1,63 @@
+@use 'sass:math';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+}
+
+body {
+    background-color: cornflowerblue;
+}
+
+// BOARD
+
+
+.board-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.board {
+    
+    $board-size:80vw;
+    $max-board-size:480px;
+
+    $square-size:10vw;
+    $max-square-size:60px;
+    
+    width: $board-size;
+    height: $board-size;
+    max-width: $max-board-size;
+    max-height: $max-board-size;
+    
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    @mixin square {
+        
+        width: $square-size;
+        height: $square-size;
+        max-width: $max-square-size;
+        max-height: $max-square-size;
+    }
+    .row {
+        display: flex;
+
+        .squarew {
+            @include square();
+            background-color: rgba(255, 255, 255, 0.468);
+        }
+
+        .squareb {
+            @include square();
+            background-color: rgba(0, 0, 0, 0.56);
+        }
+    }
+}
