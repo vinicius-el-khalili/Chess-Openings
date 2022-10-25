@@ -1,10 +1,11 @@
 const Opening = require('../models/openingModel')
 const mongoose = require('mongoose')
 
-const GetSingleOpening = async (req,res) => {
-    const {id} = req.params
-    const opening = await Opening.findById(id)
+const getOpeningByFenId = async (req,res) => {
+    const {fenID} = req.params
+    console.log(fenID)
+    const opening = await Opening.findOne({fenID:fenID})
     res.status(200).json(opening)
 }
 
-module.exports = GetSingleOpening
+module.exports = getOpeningByFenId

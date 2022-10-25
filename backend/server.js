@@ -7,7 +7,7 @@ const dotenv = require('dotenv')
 const Opening = require('./models/openingModel')
 
 // controllers
-const openingController = require('./controllers/openingControllers')
+const getOpeningByFenId = require('./controllers/openingControllers')
 
 // set express app
 const app = express()
@@ -18,5 +18,5 @@ mongoose.connect(process.env.MONGO_URI)
         app.listen(process.env.PORT,()=>{console.log('listening...')})
     })
     .catch(err=>console.log(err))
-app.get('/api/openings/:id',openingController)
+app.get('/fen/:fenID',getOpeningByFenId)
 

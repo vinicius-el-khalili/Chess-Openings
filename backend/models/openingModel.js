@@ -16,6 +16,10 @@ const openingSchema = new Schema({
     moves:{
         type:String,
         required:true
+    },
+    fenID:{
+        type:String,
+        required:true
     }
 })
 const Opening = mongoose.model('Opening',openingSchema)
