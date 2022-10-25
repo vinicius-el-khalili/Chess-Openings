@@ -23,6 +23,10 @@ const openingSchema = new Schema({
     moves:{
         type:String,
         required:true
+    },
+    fenID:{
+        type:String,
+        required:true
     }
 })
 const Opening = mongoose.model('Opening',openingSchema)
@@ -35,7 +39,8 @@ const AddOpening = async (opening)=>{
         name:opening.name,
         eco:opening.eco,
         fen:opening.fen,
-        moves:opening.moves
+        moves:opening.moves,
+        fenID:opening.fen.split(" ")[0].replaceAll("/","")
     })
 }
 
