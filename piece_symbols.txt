@@ -1,0 +1,7 @@
+Symbol	HTML Code	Symbol	HTML Code
+♔	White King	&#9812;	♕	White Queen	&#9813;
+♖	White Rook	&#9814;	♗	White Bishop	&#9815;
+♘	White Knight	&#9816;	♙	White Pawn	&#9817;
+♚	Black King	&#9818;	♛	Black Queen	&#9819;
+♜	Black Rook	&#9820;	♝	Black Bishop	&#9821;
+♞	Black Knight	&#9822;	♟	Black Pawn	&#9823;

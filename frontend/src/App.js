@@ -4,15 +4,15 @@ function App() {
       <div className="board-container">
         <div className="board">
           <div className="row 1">
+            <div className="squarew">{'\u265C'}</div>
+            <div className="squareb">{'\u265E'}</div>
             <div className="squarew"></div>
             <div className="squareb"></div>
             <div className="squarew"></div>
             <div className="squareb"></div>
-            <div className="squarew"></div>
-            <div className="squareb"></div>
-            <div className="squarew"></div>
-            <div className="squareb"></div>
-            <div className="squarew"></div>
+            <div className="squarew">{'\u265C'}</div>
+            <div className="squareb">{'\u265C'}</div>
+            <div className="squarew">{'\u265C'}</div>
           </div>
           <div className="row 2">
             <div className="squareb"></div>

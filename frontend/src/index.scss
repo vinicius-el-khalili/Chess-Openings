@@ -25,28 +25,41 @@ body {
 }
 
 .board {
-    
-    $board-size:80vw;
-    $max-board-size:480px;
 
-    $square-size:10vw;
-    $max-square-size:60px;
-    
+    $board-size: 80vw;
+    $max-board-size: 480px;
+
+    $square-size: 10vw;
+    $max-square-size: 60px;
+
     width: $board-size;
     height: $board-size;
     max-width: $max-board-size;
     max-height: $max-board-size;
-    
+
     border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
     @mixin square {
-        
+
         width: $square-size;
         height: $square-size;
         max-width: $max-square-size;
         max-height: $max-square-size;
+        font-size: $square-size;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover{
+            background-color: rgb(196, 38, 165);
+        }
+
+        @media (min-width:600px) {
+            font-size: $max-square-size;
+        }
     }
+
     .row {
         display: flex;
 
@@ -57,7 +70,7 @@ body {
 
         .squareb {
             @include square();
-            background-color: rgba(0, 0, 0, 0.56);
+            background-color: rgba(0, 0, 0, 0.26);
         }
     }
 }
