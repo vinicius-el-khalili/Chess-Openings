@@ -98,6 +98,11 @@ class Pawn extends Piece{
             }
 
         })
+
+        // -- check En pasant -- //
+        if (this.enPassant){
+            A[line+direction][column+this.enPassant]=true
+        }
         return A
     }
 }
