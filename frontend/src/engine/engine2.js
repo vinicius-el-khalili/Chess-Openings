@@ -2,7 +2,6 @@
 
 // --------------------------------------------------------------- visualization
 
-import logBoard from './logBoard'
 const logAvailableSquares = (A)=>{
     let a=Array(8).fill().map(()=>Array(8).fill(".."))
     for (let i=0;i<=7;i++){
@@ -118,4 +117,3 @@ class Board{
 // --------------------------------------------------------------- //
 
 const board = new Board()
-logBoard(board)
